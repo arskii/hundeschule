@@ -20,8 +20,8 @@ export default function Home() {
               Wir schulen Besitzer darin, Hunde so zu erziehen, dass das
               Zusammenleben mit einem Haustier angenehm ist.
             </p>
-            <MainButton text="Online termin" />
-            <SecondButton text="Beratungsfragebogen" />
+            <MainButton text="Online termin" link="/meeting" />
+            <SecondButton text="Beratungsfragebogen" link="/meeting" />
             <Image
               className="mt-18"
               src="/foots.svg"
