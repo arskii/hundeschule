@@ -1,0 +1,15 @@
+{
+    "home": {
+        "h1": "Hundeerziehung",
+        "p": "Wir schulen Besitzer darin, Hunde so zu erziehen, dass das Zusammenleben mit einem Haustier angenehm ist.",
+        "main-button": "Online termin",
+        "secont-button": "Beratungsfragebogen"
+    },
+    "menu": {
+        "articles": "Wichtiges über Hunde",
+        "about": "Über mich",
+        "price": "Preise",
+        "galery": "Galerie",
+        "services": "Leistungen"
+    }
+}
