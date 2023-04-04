@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between font-serif uppercase xl:text-xl md:text-base">
+    <div className="flex justify-between font-serif uppercase xl:text-xl md:text-base">
       <ul className="flex items-center xl:gap-10 md:gap-5">
         <li>
           <a href="#articles">Wichtiges über Hunde</a>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link href="/">Ru</Link>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };
 

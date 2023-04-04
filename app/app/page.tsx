@@ -9,41 +9,39 @@ import Galery from "./galery/page";
 
 export default function Home() {
   return (
-    <>
-      <div className="container mx-auto">
-        <section className="flex justify-between items-center py-10">
-          <div className="flex flex-col xl:w-96 lg:w-72 gap-y-5">
-            <h1 className="font-serif font-bold uppercase xl:text-5xl lg:text-4xl">
-              HUNDEERZIEHUNG
-            </h1>
-            <p className=" text-left text-lg">
-              Wir schulen Besitzer darin, Hunde so zu erziehen, dass das
-              Zusammenleben mit einem Haustier angenehm ist.
-            </p>
-            <MainButton text="Online termin" link="/meeting" />
-            <SecondButton text="Beratungsfragebogen" link="/meeting" />
-            <Image
-              className="mt-18"
-              src="/foots.svg"
-              width={400}
-              height={230}
-              alt="foots"
-            ></Image>
-          </div>
-          <div className=" relative">
-            <Image
-              src="/zyro-image.png"
-              width={650}
-              height={700}
-              alt={"Main dog"}
-            ></Image>
-          </div>
-        </section>
-        <Articles />
-        <About />
-        <Price />
-        <Galery />
-      </div>
-    </>
+    <div className="container mx-auto">
+      <section className="flex justify-between items-center py-10">
+        <div className="flex flex-col xl:w-96 lg:w-72 gap-y-5">
+          <h1 className="font-serif font-bold uppercase xl:text-5xl lg:text-4xl">
+            HUNDEERZIEHUNG
+          </h1>
+          <p className=" text-left text-lg">
+            Wir schulen Besitzer darin, Hunde so zu erziehen, dass das
+            Zusammenleben mit einem Haustier angenehm ist.
+          </p>
+          <MainButton text="Online termin" link="/meeting" />
+          <SecondButton text="Beratungsfragebogen" link="/form" />
+          <Image
+            className="mt-18"
+            src="/foots.svg"
+            width={400}
+            height={230}
+            alt="foots"
+          ></Image>
+        </div>
+        <div className=" relative">
+          <Image
+            src="/zyro-image.png"
+            width={650}
+            height={700}
+            alt={"Main dog"}
+          ></Image>
+        </div>
+      </section>
+      <Articles />
+      <About />
+      <Price />
+      <Galery />
+    </div>
   );
 }

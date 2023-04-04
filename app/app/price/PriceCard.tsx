@@ -31,7 +31,7 @@ const PriceCard = ({
           </div>
         </div>
       </div>
-      <SecondButton text="Anfrage" />
+      <SecondButton text="Anfrage" link="/meeting" />
     </div>
   );
 };

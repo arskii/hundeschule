@@ -12,10 +12,16 @@ interface CustomButtonProps {
 const SecondButton = ({ text, className, link }: CustomButtonProps) => {
   const router = useRouter();
 
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    router.push(link);
+  };
+
   return (
     <button
+      type="submit"
       className={`bg-white text-black font-bold font-serif py-5 px-10 uppercase ${className}`}
-      onClick={() => router.push(link)}
+      onClick={handleClick}
     >
       {text}
     </button>

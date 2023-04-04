@@ -1,19 +1,34 @@
 "use client";
 
+import { ChangeEventHandler } from "react";
+
 interface CheckboxInterface {
-  label: string;
+  type: string;
+  name: string;
+  value: string;
+  checked: boolean;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
-const Checkbox = ({ label }: CheckboxInterface) => {
+const Checkbox = ({
+  type,
+  name,
+  value,
+  checked,
+  onChange,
+}: CheckboxInterface) => {
   return (
-    <div className="flex gap-x-2">
+    <div className="flex gap-x-2 mb-2">
       <input
-        name="question"
-        type="checkbox"
-        className="bg-white appearance-none checked:bg-main w-6 h-6 "
+        type={type}
+        name={name}
+        value={value}
+        checked={checked}
+        onChange={onChange}
+        className="bg-white appearance-none checked:bg-main w-6 h-6"
       />
       <label htmlFor="question" className="font-serif font-bold">
-        {label}
+        {value}
       </label>
     </div>
   );

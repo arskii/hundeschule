@@ -5,7 +5,7 @@ interface QuestionInterface {
 const Question = ({ title, children }: QuestionInterface) => {
   return (
     <div className="flex">
-      <div className="w-2/6 pr-10">
+      <div className="w-2/6 pr-10 text-xl">
         <p>{title}</p>
       </div>
       <div className="flex flex-wrap gap-x-10 w-4/6">{children}</div>
