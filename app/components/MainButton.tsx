@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useRouter } from "next/navigation";
 
 interface CustomButtonProps {
@@ -14,7 +13,7 @@ const MainButton = ({ text, className, link }: CustomButtonProps) => {
 
   return (
     <button
-      type="button"
+      type="submit"
       className={`bg-main hover:bg-blue-700 text-white font-bold font-serif py-5 px-10 uppercase ${className}`}
       onClick={() => router.push(link)}
     >

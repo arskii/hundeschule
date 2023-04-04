@@ -1,4 +1,4 @@
-import { IBM_Plex_Mono, Catamaran } from "next/font/google";
+import { IBM_Plex_Mono, Catamaran, Roboto } from "next/font/google";
 
 import "./globals.css";
 import Logo from "./Logo";
@@ -8,15 +8,16 @@ import TopBar from "./TopBar";
 import { ScrollToTopButton } from "./ToTopButton";
 
 const ibm_plex_mono = IBM_Plex_Mono({
-  preload: true,
+  display: "block",
   variable: "--font-ibm_plex_mono",
-  weight: ["600", "400"],
+  weight: ["500", "400"],
   subsets: ["latin"],
 });
 
 const catamaran = Catamaran({
-  preload: true,
+  display: "block",
   variable: "--font-catamaran",
+  weight: ["500", "400"],
   subsets: ["latin"],
 });
 
@@ -35,16 +36,22 @@ export default function RootLayout({
       lang="en"
       className={`${ibm_plex_mono.variable} ${catamaran.variable}`}
     >
-      <body className="bg-light-blue overflow-x-hidden">
-        <TopBar />
-        <nav className="container mx-auto">
-          <Logo />
-          <Navbar />
-        </nav>
+      <body>
+        <header>
+          <TopBar />
+          <nav>
+            <div>
+              <Logo />
+              <Navbar />
+            </div>
+          </nav>
+          <ScrollToTopButton />
+        </header>
         <main>{children}</main>
-        <ScrollToTopButton />
-        <footer className="bg-white h-80 w-screen">
-          <Footer />
+        <footer>
+          <div>
+            <Footer />
+          </div>
         </footer>
       </body>
     </html>
