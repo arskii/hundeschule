@@ -12,6 +12,7 @@ import Footer from "./footer/page";
 import Navbar from "./Navbar";
 import TopBar from "./TopBar";
 import { ScrollToTopButton } from "./ToTopButton";
+import CookieConsent from "./components/CookieConsent";
 
 const ibm_plex_mono = IBM_Plex_Mono({
   display: "block",
@@ -62,6 +63,7 @@ export default async function RootLayout({
             <Footer />
           </div>
         </footer>
+        <CookieConsent />
       </body>
     </html>
   );

@@ -2,11 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import AboutCard from "./AboutCard";
 
-const About = () => {
+const About = ({
+  dictionary,
+}: {
+  dictionary: {
+    about: string;
+  };
+}) => {
   return (
     <section id="about" className="py-10">
       <h2 className="font-serif font-bold uppercase xl:text-4xl lg:text-3xl">
-        Über mich
+        {dictionary.about}
       </h2>
       <div className="container flex px-16 my-10 justify-between">
         <div className="flex">

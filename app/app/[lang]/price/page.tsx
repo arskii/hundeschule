@@ -29,11 +29,17 @@ const List = [
   },
 ];
 
-const Price = () => {
+const Price = ({
+  dictionary,
+}: {
+  dictionary: {
+    price: string;
+  };
+}) => {
   return (
     <section id="price" className="py-10">
       <h2 className="font-serif font-bold uppercase xl:text-4xl lg:text-3xl">
-        Preisübersicht
+        {dictionary.price}
       </h2>
       <h3 className="font-serif uppercase xl:text-xl">
         Einzeltraining / Beratung
