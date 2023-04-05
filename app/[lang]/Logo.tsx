@@ -5,7 +5,7 @@ import { Locale } from "../../i18n-config";
 
 const Logo = ({ params: { lang } }: { params: { lang: Locale } }) => {
   return (
-    <Link href={`/${lang}/`}>
+    <Link href={`/${lang}`}>
       <div className="flex items-center justify-center py-7">
         <Image priority src={`/logo.svg`} width={180} height={80} alt="logo" />
       </div>

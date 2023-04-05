@@ -33,11 +33,17 @@ const List = [
   },
 ];
 
-const Galery = () => {
+const Galery = ({
+  dictionary,
+}: {
+  dictionary: {
+    galery: string;
+  };
+}) => {
   return (
     <section id="galery" className="py-10">
       <h2 className="font-serif font-bold uppercase xl:text-4xl lg:text-3xl">
-        Galerie
+        {dictionary.galery}
       </h2>
       <div className="container flex flex-wrap justify-between gap-y-14 mt-10">
         {List.map((item) => (

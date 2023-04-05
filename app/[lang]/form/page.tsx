@@ -1,4 +1,6 @@
 import SendForm, { Field } from "../components/SendForm";
+import { Locale } from "../../../i18n-config";
+import { getDictionary } from "../../../get-dictionary";
 
 const formFields: Field[] = [
   {
@@ -45,17 +47,15 @@ const formFields: Field[] = [
   },
 ];
 
-const Form = () => {
+const Form = async ({ params: { lang } }: { params: { lang: Locale } }) => {
+  const dictionary = await getDictionary(lang);
   return (
     <div className="container mx-auto">
       <div className="w-3/6 pt-10">
         <h1 className="font-bold font-serif uppercase text-3xl">
-          Beratungsfragebogen
+          {dictionary["online-form"].h1}
         </h1>
-        <p>
-          Dieser Fragebogen dient der Vorbereitung auf unser Erstgespräch und
-          hilft bei der Diagnostik und Entwicklung des Trainingskonzeptes.
-        </p>
+        <p>{dictionary["online-form"].p}</p>
       </div>
       <SendForm formFields={formFields} />
       <div className="my-48"></div>

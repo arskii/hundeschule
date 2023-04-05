@@ -51,7 +51,7 @@ const SendForm = ({ formFields }: FieldsData) => {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const errors: { [key: string]: string } = {};
     formFields.forEach((field) => {
@@ -67,8 +67,20 @@ const SendForm = ({ formFields }: FieldsData) => {
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
       console.log(formData);
+      const response = await fetch("http://localhost:1337/api/online-forms", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: formData }),
+      });
 
-      setShowSuccess(true);
+      if (response.ok) {
+        setShowSuccess(true);
+      } else {
+        setShowSuccess(false);
+      }
+
       // Submit the form data
 
       setFormData({});

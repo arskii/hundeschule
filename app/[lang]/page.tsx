@@ -48,10 +48,10 @@ export default async function Home({
           ></Image>
         </div>
       </section>
-      <Articles />
-      <About />
-      <Price />
-      <Galery />
+      <Articles dictionary={dictionary.titles} />
+      <About dictionary={dictionary.titles} />
+      <Price dictionary={dictionary.titles} />
+      <Galery dictionary={dictionary.titles} />
     </div>
   );
 }
