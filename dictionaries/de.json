@@ -1,32 +1,31 @@
 {
-    "home": {
-        "h1": "Hundeerziehung",
-        "p": "Wir schulen Besitzer darin, Hunde so zu erziehen, dass das Zusammenleben mit einem Haustier angenehm ist.",
-        "main-button": "Online termin",
-        "secont-button": "Beratungsfragebogen"
-    },
-    "menu": {
-        "articles": "Wichtiges über Hunde",
-        "about": "Über mich",
-        "price": "Preise",
-        "galery": "Galerie",
-        "services": "Leistungen"
-    },
-    "titles": {
-        "articles": "Wichtiges über Hunde",
-        "about": "Über mich",
-        "price": "Preisübersicht",
-        "galery": "Galerie",
-        "services": "Leistungen"
-    },
-    "online-termin": {
-        "h1": "Online termin",
-        "p1": "Herzlich Willkommen bei der Online-Terminbuchung unserer Hundeschule!",
-        "p2": "Wir freuen uns sehr, dass du vorbeischaust!"
-    },
-    "online-form": {
-        "h1": "Beratungsfragebogen",
-        "p": "Dieser Fragebogen dient der Vorbereitung auf unser Erstgespräch und hilft bei der Diagnostik und Entwicklung des Trainingskonzeptes."
-    }
-
+	"home": {
+		"h1": "Hundeerziehung",
+		"p": "Wir schulen Besitzer darin, Hunde so zu erziehen, dass das Zusammenleben mit einem Haustier angenehm ist.",
+		"mainButton": "Online termin",
+		"secondButton": "Beratungsfragebogen"
+	},
+	"menu": {
+		"articles": "Wichtiges über Hunde",
+		"about": "Über mich",
+		"price": "Preise",
+		"gallery": "Galerie",
+		"services": "Leistungen"
+	},
+	"titles": {
+		"articles": "Wichtiges über Hunde",
+		"about": "Über mich",
+		"price": "Preisübersicht",
+		"gallery": "Galerie",
+		"services": "Leistungen"
+	},
+	"online-termin": {
+		"h1": "Online termin",
+		"p1": "Herzlich Willkommen bei der Online-Terminbuchung unserer Hundeschule!",
+		"p2": "Wir freuen uns sehr, dass du vorbeischaust!"
+	},
+	"online-form": {
+		"h1": "Beratungsfragebogen",
+		"p": "Dieser Fragebogen dient der Vorbereitung auf unser Erstgespräch und hilft bei der Diagnostik und Entwicklung des Trainingskonzeptes."
+	}
 }
