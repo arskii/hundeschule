@@ -3,13 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-light-blue overflow-x-hidden;
-  }
-  nav {
-    @apply container mx-auto;
-  }
-  footer {
-    @apply bg-white h-80 w-screen;
-  }
+	body {
+		@apply bg-light-blue overflow-x-hidden;
+	}
 }
