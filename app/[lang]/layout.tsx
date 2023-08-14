@@ -6,7 +6,7 @@ export async function generateStaticParams() {
 }
 
 import Footer from '@component/components/Footer'
-import Header from '@component/components/Header'
+import Header from '@component/components/header/Header'
 import { ScrollToTopButton } from '@component/components/ToTopButton'
 import { getDictionary } from '@component/get-dictionary'
 import './globals.css'

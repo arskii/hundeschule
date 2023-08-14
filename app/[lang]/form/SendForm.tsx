@@ -2,12 +2,12 @@
 
 import { ChangeEvent, useState } from 'react'
 
-import ErrorMessage from './ErrorMessage'
 import MainButton from '../../../components/MainButton'
 import Checkbox from '../meeting/Checkbox'
 import DateTimeField from '../meeting/DateTimeField'
 import Question from '../meeting/Question'
 import Textfield from '../meeting/Textfield'
+import ErrorMessage from './ErrorMessage'
 
 export interface Field {
 	label: string
@@ -80,8 +80,6 @@ const SendForm = ({ formFields }: FieldsData) => {
 			} else {
 				setShowSuccess(false)
 			}
-
-			// Submit the form data
 
 			setFormData({})
 		}
