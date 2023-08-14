@@ -1,6 +1,9 @@
+'use client'
 import Logo from '@component/components/header/Logo'
-import TopBar from '@component/components/header/TopBar'
 import Navbar from '@component/components/header/Navbar'
+import TopBar from '@component/components/header/TopBar'
+import { useState } from 'react'
+import MobileNav from './MobileNav'
 
 interface IMenu {
 	articles: string
@@ -17,11 +20,22 @@ const Header = ({
 		menu: IMenu
 	}
 }) => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	const toggleMenu = () => {
+		setIsMenuOpen(prev => !prev)
+	}
+
 	return (
 		<header>
 			<TopBar />
 			<Logo />
-			<Navbar dictionary={dictionary.menu} />
+			<MobileNav
+				dictionary={dictionary.menu}
+				isOpen={isMenuOpen}
+				toggleMenu={toggleMenu}
+			/>
+			<Navbar dictionary={dictionary.menu} toggleMenu={toggleMenu} />
 		</header>
 	)
 }

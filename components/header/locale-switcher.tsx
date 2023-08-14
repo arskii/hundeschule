@@ -13,12 +13,12 @@ export default function LocaleSwitcher() {
 		return segments.join('/')
 	}
 	return (
-		<ul className="flex items-center gap-4">
+		<ul className="flex items-center gap-10 lg:gap-4">
 			{i18n.locales.map((locale: string) => {
 				return (
 					<li key={locale}>
 						<Link
-							className="hover:text-white"
+							className="hover:text-white uppercase"
 							href={redirectedPathName(locale)}
 						>
 							{locale}

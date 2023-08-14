@@ -11,7 +11,7 @@ const About = ({
 }) => {
 	return (
 		<section id="about">
-			<div className="container mx-auto flex flex-col px-8 lg:px-0 pt-20">
+			<div className="container mx-auto flex flex-col px-2 lg:px-0 pt-20">
 				<h2 className="font-serif font-bold uppercase text-2xl xl:text-4xl lg:text-3xl">
 					{dictionary.about}
 				</h2>
