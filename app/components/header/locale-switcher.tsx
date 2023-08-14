@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { i18n } from '../i18n-config'
+import { i18n } from '../../i18n-config'
 
 export default function LocaleSwitcher() {
 	const pathName = usePathname()
@@ -13,7 +13,7 @@ export default function LocaleSwitcher() {
 		return segments.join('/')
 	}
 	return (
-		<ul className="flex items-center gap-2">
+		<ul className="flex items-center gap-4">
 			{i18n.locales.map((locale: string) => {
 				return (
 					<li key={locale}>

@@ -1,6 +1,6 @@
-import Logo from '@component/components/Logo'
-import Navbar from '@component/components/Navbar'
-import TopBar from '@component/components/TopBar'
+import Logo from '@component/components/header/Logo'
+import TopBar from '@component/components/header/TopBar'
+import Navbar from '@component/components/header/Navbar'
 
 interface IMenu {
 	articles: string
@@ -20,10 +20,8 @@ const Header = ({
 	return (
 		<header>
 			<TopBar />
-			<nav className="container mx-auto">
-				<Logo />
-				<Navbar dictionary={dictionary.menu} />
-			</nav>
+			<Logo />
+			<Navbar dictionary={dictionary.menu} />
 		</header>
 	)
 }
