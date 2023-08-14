@@ -1,10 +1,10 @@
 'use client'
 
+import menuButton from '@/icons/menuButton.svg'
+import Image from 'next/image'
 import LocaleSwitcher from './locale-switcher'
 
-export default function Navbar({
-	dictionary,
-}: {
+interface INavBar {
 	dictionary: {
 		articles: string
 		about: string
@@ -12,11 +12,19 @@ export default function Navbar({
 		gallery: string
 		services: string
 	}
-}) {
+	toggleMenu: () => void
+}
+export default function Navbar({ dictionary, toggleMenu }: INavBar) {
 	return (
 		<nav className="container mx-auto">
+			<button
+				className="lg:hidden absolute top-9 left-10 text-white focus:outline-none"
+				onClick={toggleMenu}
+			>
+				<Image src={menuButton} alt="menu" />
+			</button>
 			<div className="hidden lg:flex justify-between font-serif uppercase xl:text-xl md:text-base">
-				<ul className="flex items-center xl:gap-10 md:gap-5">
+				<ul className="flex items-center gap-10">
 					<li>
 						<a className="hover:text-white" href={`#articles`}>
 							{dictionary.articles}

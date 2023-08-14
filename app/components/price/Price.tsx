@@ -38,7 +38,7 @@ const Price = ({
 }) => {
 	return (
 		<section id="price">
-			<div className="container mx-auto flex flex-col px-8 lg:px-0 pt-20">
+			<div className="container mx-auto flex flex-col px-2 lg:px-0 pt-20">
 				<h2 className="font-serif text-2xl font-bold uppercase xl:text-4xl lg:text-3xl">
 					{dictionary.price}
 				</h2>

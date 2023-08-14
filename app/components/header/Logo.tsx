@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const Logo = () => {
 	return (
-		<Link href={'/'}>
-			<div className="flex items-center justify-center py-10">
+		<div className="flex items-center justify-center py-8 lg:py-10">
+			<Link href={'/'}>
 				<Image
 					className="hidden lg:block"
 					priority
@@ -19,8 +19,8 @@ const Logo = () => {
 					</p>
 					<p className="text-sm md:text-base">Hundeschule</p>
 				</div>
-			</div>
-		</Link>
+			</Link>
+		</div>
 	)
 }
 

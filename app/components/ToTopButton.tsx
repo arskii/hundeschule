@@ -1,5 +1,7 @@
 'use client'
 
+import toTopButton from '@/icons/toTopButton.svg'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export const ScrollToTopButton = () => {
@@ -29,13 +31,13 @@ export const ScrollToTopButton = () => {
 	}, [])
 
 	return (
-		<div className="fixed bottom-5 right-5">
+		<div className="fixed bottom-5 right-5 lg:bottom-10 lg:right-10">
 			{isVisible && (
 				<button
-					className="px-5 py-2 bg-main text-white uppercase font-serif font-bold"
+					className=" bg-main text-white uppercase font-serif font-bold"
 					onClick={scrollToTop}
 				>
-					To Top
+					<Image src={toTopButton} alt="top button" />
 				</button>
 			)}
 		</div>

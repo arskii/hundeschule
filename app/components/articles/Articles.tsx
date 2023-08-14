@@ -41,7 +41,7 @@ const Articles = ({
 }) => {
 	return (
 		<section id="articles">
-			<div className="container mx-auto px-8 lg:px-0 pt-20">
+			<div className="container mx-auto px-2 lg:px-0 pt-20">
 				<h2 className="font-serif font-bold text-2xl uppercase xl:text-4xl lg:text-3xl pb-10">
 					{dictionary.articles}
 				</h2>
