@@ -39,10 +39,10 @@ const formFields: Field[] = [
 		name: 'datetime',
 		type: 'datetime',
 		options: [
-			'2023-04-04T12:00:00.000Z',
-			'2023-04-05T09:30:00.000Z',
-			'2023-04-06T16:15:00.000Z',
-			'2023-04-07T14:00:00.000Z',
+			'2023-09-09T12:00:00.000Z',
+			'2023-08-23T09:30:00.000Z',
+			'2023-09-01T16:15:00.000Z',
+			'2023-09-03T14:00:00.000Z',
 		],
 		required: true,
 	},
@@ -90,12 +90,16 @@ const Meeting = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 	return (
 		<main>
 			<div className="container mx-auto">
-				<div className="w-3/6 pt-10">
-					<h1 className="font-bold font-serif uppercase text-3xl">
+				<div className="flex flex-col w-full lg:w-1/2 pt-10 lg:pt-20 gap-4">
+					<h1 className="font-bold font-serif uppercase text-xl lg:text-3xl">
 						{dictionary['online-termin'].h1}
 					</h1>
-					<p>{dictionary['online-termin'].p1}</p>
-					<p>{dictionary['online-termin'].p2}</p>
+					<p className="font-sans text-base lg:text-lg">
+						{dictionary['online-termin'].p1}
+					</p>
+					<p className="font-sans text-base lg:text-lg">
+						{dictionary['online-termin'].p2}
+					</p>
 				</div>
 				<SendForm formFields={formFields} />
 				<div className="my-48"></div>

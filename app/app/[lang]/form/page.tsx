@@ -52,11 +52,13 @@ const Form = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 	return (
 		<main>
 			<div className="container mx-auto">
-				<div className="w-3/6 pt-10">
-					<h1 className="font-bold font-serif uppercase text-3xl">
+				<div className="flex flex-col w-full lg:w-1/2 pt-10 lg:pt-20 gap-4 ">
+					<h1 className="font-bold font-serif uppercase text-xl lg:text-3xl ">
 						{dictionary['online-form'].h1}
 					</h1>
-					<p>{dictionary['online-form'].p}</p>
+					<p className="font-sans text-base lg:text-lg">
+						{dictionary['online-form'].p}
+					</p>
 				</div>
 				<SendForm formFields={formFields} />
 				<div className="my-48"></div>
