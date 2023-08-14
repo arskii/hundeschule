@@ -67,19 +67,21 @@ const SendForm = ({ formFields }: FieldsData) => {
 		setErrors(errors)
 		if (Object.keys(errors).length === 0) {
 			console.log(formData)
-			const response = await fetch('http://localhost:1337/api/online-forms', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ data: formData }),
-			})
+			// const response = await fetch('http://localhost:1337/api/online-forms', {
+			// 	method: 'POST',
+			// 	headers: {
+			// 		'Content-Type': 'application/json',
+			// 	},
+			// 	body: JSON.stringify({ data: formData }),
+			// })
 
-			if (response.ok) {
-				setShowSuccess(true)
-			} else {
-				setShowSuccess(false)
-			}
+			// if (response.ok) {
+			// 	setShowSuccess(true)
+			// } else {
+			// 	setShowSuccess(false)
+			// }
+
+			setShowSuccess(true)
 
 			setFormData({})
 		}
@@ -94,7 +96,10 @@ const SendForm = ({ formFields }: FieldsData) => {
 						if (field.type === 'radio') {
 							return (
 								<>
-									<Question key={field.name} title={field.label}>
+									<Question
+										key={field.name}
+										title={`${field.label} ${field.required ? '*' : ''}`}
+									>
 										{field.options?.map(option => (
 											<Checkbox
 												key={`${field.name}-${option}`}
@@ -130,7 +135,10 @@ const SendForm = ({ formFields }: FieldsData) => {
 						} else if (field.type === 'text') {
 							return (
 								<>
-									<Question key={field.name} title={field.label}>
+									<Question
+										key={field.name}
+										title={`${field.label} ${field.required ? '*' : ''}`}
+									>
 										<Textfield
 											type={field.type}
 											name={field.name}
@@ -146,7 +154,10 @@ const SendForm = ({ formFields }: FieldsData) => {
 						} else if (field.type === 'datetime') {
 							return (
 								<>
-									<Question key={field.name} title={field.label}>
+									<Question
+										key={field.name}
+										title={`${field.label} ${field.required ? '*' : ''}`}
+									>
 										<DateTimeField
 											key={field.name}
 											value={String(formData[field.name] || '')}
@@ -163,7 +174,10 @@ const SendForm = ({ formFields }: FieldsData) => {
 						} else if (field.type === 'email') {
 							return (
 								<>
-									<Question key={field.name} title={field.label}>
+									<Question
+										key={field.name}
+										title={`${field.label} ${field.required ? '*' : ''}`}
+									>
 										<Textfield
 											type={field.type}
 											name={field.name}
