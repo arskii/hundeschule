@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const TopBar = () => {
+const TopBar = ({ headerLink }: { headerLink: { link: string } }) => {
 	return (
 		<Link
-			href={''}
+			target="_blank"
+			rel="noopener noreferrer"
+			href={headerLink.link}
 			className="hidden lg:flex flex-row gap-x-2 h-14 w-screen bg-white text-center items-center justify-center font-serif text-lx"
 		>
 			<p>#Help Ukraine</p>

@@ -20,18 +20,6 @@ async function getArticles() {
 	return res.json()
 }
 
-async function getHeader() {
-	const res = await fetch(
-		`${process.env.PAYLOAD_SERVER_URL}/api/globals/header/`
-	)
-
-	if (!res.ok) {
-		throw new Error('Failed to fetch data')
-	}
-
-	return res.json()
-}
-
 export default async function Home({
 	params: { lang },
 }: {

@@ -14,8 +14,10 @@ interface IMenu {
 }
 
 const Header = ({
+	headerLink,
 	dictionary,
 }: {
+	headerLink: { link: string }
 	dictionary: {
 		menu: IMenu
 	}
@@ -28,7 +30,7 @@ const Header = ({
 
 	return (
 		<header>
-			<TopBar />
+			<TopBar headerLink={headerLink} />
 			<Logo />
 			<MobileNav
 				dictionary={dictionary.menu}
