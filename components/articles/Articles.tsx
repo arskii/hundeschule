@@ -1,5 +1,5 @@
+import CardArticle from '@/components/articles/CardArticle'
 import Image from 'next/image'
-import CardArticle from './CardArticle'
 
 const List = [
 	{
@@ -55,20 +55,12 @@ export interface PostsProps {
 	docs: Post[]
 }
 
-const Articles = ({
-	dictionary,
-	data,
-}: {
-	dictionary: {
-		articles: string
-	}
-	data: PostsProps
-}) => {
+const Articles = ({ data }: { data: PostsProps }) => {
 	return (
 		<section id="articles">
 			<div className="container mx-auto px-2 lg:px-0 pt-20">
 				<h2 className="font-serif font-bold text-2xl uppercase xl:text-3xl lg:text-3xl pb-10">
-					{dictionary.articles}
+					Wichtiges über Hunde
 				</h2>
 				<div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 					{data.docs.map((item: Post) => (

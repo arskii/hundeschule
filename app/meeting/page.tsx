@@ -1,5 +1,3 @@
-import { getDictionary } from '../../../get-dictionary'
-import { Locale } from '../../../i18n-config'
 import SendForm, { Field } from '../form/SendForm'
 
 // interface FieldsData {
@@ -84,21 +82,22 @@ const formFields: Field[] = [
 	},
 ]
 
-const Meeting = async ({ params: { lang } }: { params: { lang: Locale } }) => {
+const Meeting = async () => {
 	// const data: Field[] = await fetchData();
-	const dictionary = await getDictionary(lang)
+
 	return (
 		<main>
 			<div className="container mx-auto">
 				<div className="flex flex-col w-full lg:w-1/2 pt-10 lg:pt-20 gap-4">
 					<h1 className="font-bold font-serif uppercase text-xl lg:text-3xl">
-						{dictionary['online-termin'].h1}
+						Online termin
 					</h1>
 					<p className="font-sans text-base lg:text-lg">
-						{dictionary['online-termin'].p1}
+						Herzlich Willkommen bei der Online-Terminbuchung unserer
+						Hundeschule!
 					</p>
 					<p className="font-sans text-base lg:text-lg">
-						{dictionary['online-termin'].p2}
+						Wir freuen uns sehr, dass du vorbeischaust!
 					</p>
 				</div>
 				<SendForm formFields={formFields} />

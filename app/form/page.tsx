@@ -1,5 +1,3 @@
-import { getDictionary } from '../../../get-dictionary'
-import { Locale } from '../../../i18n-config'
 import SendForm, { Field } from './SendForm'
 
 const formFields: Field[] = [
@@ -47,17 +45,17 @@ const formFields: Field[] = [
 	},
 ]
 
-const Form = async ({ params: { lang } }: { params: { lang: Locale } }) => {
-	const dictionary = await getDictionary(lang)
+const Form = async () => {
 	return (
 		<main>
 			<div className="container mx-auto">
 				<div className="flex flex-col w-full lg:w-1/2 pt-10 lg:pt-20 gap-4 ">
 					<h1 className="font-bold font-serif uppercase text-xl lg:text-3xl ">
-						{dictionary['online-form'].h1}
+						Beratungsfragebogen
 					</h1>
 					<p className="font-sans text-base lg:text-lg">
-						{dictionary['online-form'].p}
+						Dieser Fragebogen dient der Vorbereitung auf unser Erstgespräch und
+						hilft bei der Diagnostik und Entwicklung des Trainingskonzeptes.
 					</p>
 				</div>
 				<SendForm formFields={formFields} />

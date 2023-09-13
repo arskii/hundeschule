@@ -1,4 +1,4 @@
-import { Post } from '@component/components/articles/Articles'
+import { Post } from '@/components/articles/Articles'
 import Image from 'next/image'
 
 const getPost = async (id: string): Promise<Post> => {

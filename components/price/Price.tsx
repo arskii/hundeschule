@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import PriceCard from './PriceCard'
+import PriceCard from '@/components/price/PriceCard'
 
 const List = [
 	{
@@ -29,18 +29,12 @@ const List = [
 	},
 ]
 
-const Price = ({
-	dictionary,
-}: {
-	dictionary: {
-		price: string
-	}
-}) => {
+const Price = () => {
 	return (
 		<section id="price">
 			<div className="container mx-auto flex flex-col px-2 lg:px-0 pt-20">
 				<h2 className="font-serif text-2xl font-bold uppercase xl:text-4xl lg:text-3xl">
-					{dictionary.price}
+					Preise
 				</h2>
 				<h3 className="font-serif uppercase xl:text-xl">
 					Einzeltraining / Beratung

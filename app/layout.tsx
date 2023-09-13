@@ -1,14 +1,9 @@
 import { Catamaran, IBM_Plex_Mono } from 'next/font/google'
-import { Locale, i18n } from '../../i18n-config'
 
-export async function generateStaticParams() {
-	return i18n.locales.map(locale => ({ lang: locale }))
-}
-
-import Footer from '@component/components/Footer'
-import { ScrollToTopButton } from '@component/components/ToTopButton'
-import Header from '@component/components/header/Header'
-import { getDictionary } from '@component/get-dictionary'
+import CookieConsent from '@/components/CookieConsent'
+import Footer from '@/components/Footer'
+import { ScrollToTopButton } from '@/components/ToTopButton'
+import Header from '@/components/header/Header'
 import './globals.css'
 
 const ibm_plex_mono = IBM_Plex_Mono({
@@ -47,22 +42,20 @@ async function getHeader() {
 
 export default async function RootLayout({
 	children,
-	params,
 }: {
 	children: React.ReactNode
-	params: { lang: Locale }
 }) {
-	const dictionary = await getDictionary(params.lang)
 	const header = await getHeader()
 	return (
 		<html
-			lang={params.lang}
+			lang="de"
 			className={`${ibm_plex_mono.variable} ${catamaran.variable}`}
 		>
 			<body>
-				<Header headerLink={header} dictionary={dictionary} />
+				<Header headerLink={header} />
 				{children}
 				<ScrollToTopButton />
+				<CookieConsent />
 				<Footer />
 			</body>
 		</html>

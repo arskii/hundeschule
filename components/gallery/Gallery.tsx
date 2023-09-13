@@ -1,4 +1,4 @@
-import PhotoCard from './PhotoCard'
+import PhotoCard from '@/components/gallery/PhotoCard'
 
 const List = [
 	{
@@ -33,18 +33,12 @@ const List = [
 	},
 ]
 
-const Gallery = ({
-	dictionary,
-}: {
-	dictionary: {
-		gallery: string
-	}
-}) => {
+const Gallery = () => {
 	return (
 		<section id="galery" className="py-10">
 			<div className="container mx-auto flex flex-col">
 				<h2 className="font-serif font-bold uppercase text-2xl xl:text-4xl lg:text-3xl">
-					{dictionary.gallery}
+					Galerie
 				</h2>
 				<div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
 					{List.map(item => (

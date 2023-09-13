@@ -1,42 +1,23 @@
 import Image from 'next/image'
 
-import { Locale } from '@component/i18n-config'
-import MainButton from './MainButton'
-import SecondButton from './SecondButton'
+import MainButton from '@/components/MainButton'
+import SecondButton from '@/components/SecondButton'
 
-interface IHero {
-	h1: string
-	p: string
-	mainButton: string
-	secondButton: string
-}
-
-const Hero = ({
-	dictionary,
-	lang,
-}: {
-	dictionary: {
-		home: IHero
-	}
-	lang: Locale
-}) => {
+const Hero = () => {
 	return (
 		<section>
 			<div className="container mx-auto px-2 lg:px-0 flex lg:flex-row flex-col  justify-between items-center lg:pt-20 gap-10 lg:gap-16">
 				<div className="flex flex-col xl:w-4/12 lg:w-1/3 gap-y-16">
 					<div className="flex flex-col gap-y-5">
 						<h1 className="font-serif font-bold uppercase text-center lg:text-start text-2xl xl:text-5xl lg:text-4xl">
-							{dictionary['home'].h1}
+							Hundeerziehung
 						</h1>
-						<p className=" text-left text-lg">{dictionary['home'].p}</p>
-						<MainButton
-							text={dictionary['home']['mainButton']}
-							link={`/${lang}/meeting`}
-						/>
-						<SecondButton
-							text={dictionary['home']['secondButton']}
-							link={`/${lang}/form`}
-						/>
+						<p className=" text-left text-lg">
+							Wir schulen Besitzer darin, Hunde so zu erziehen, dass das
+							Zusammenleben mit einem Haustier angenehm ist.
+						</p>
+						<MainButton text="Online termin" link={'/meeting'} />
+						<SecondButton text="Beratungsfragebogen" link={'/form'} />
 					</div>
 					<Image
 						className="hidden lg:flex"

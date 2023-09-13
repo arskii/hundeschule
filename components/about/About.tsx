@@ -1,19 +1,13 @@
+import AboutCard from '@/components/about/AboutCard'
 import Image from 'next/image'
 import Link from 'next/link'
-import AboutCard from './AboutCard'
 
-const About = ({
-	dictionary,
-}: {
-	dictionary: {
-		about: string
-	}
-}) => {
+const About = () => {
 	return (
 		<section id="about">
 			<div className="container mx-auto flex flex-col px-2 lg:px-0 pt-20">
 				<h2 className="font-serif font-bold uppercase text-2xl xl:text-4xl lg:text-3xl">
-					{dictionary.about}
+					Über mich
 				</h2>
 				<div className="flex flex-col gap-12 lg:flex-row my-10 justify-between items-start">
 					<div className="w-full lg:w-1/3 relative">
@@ -41,7 +35,7 @@ const About = ({
 						zu werden, arbeite ich deshalb in meiner Hundeschule Hannover.
 						<p>
 							Ich freue mich auf dich und deine tierische Begleitung in meiner
-							Hundeschule Hannover!{' '}
+							Hundeschule Hannover!
 						</p>
 						Dein Hunde
 						<p>Coach Nataliya</p>

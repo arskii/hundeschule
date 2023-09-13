@@ -3,21 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import Logo from './Logo'
-import LocaleSwitcher from './locale-switcher'
 
 interface IMobileNav {
 	isOpen: boolean
 	toggleMenu: () => void
-	dictionary: {
-		articles: string
-		about: string
-		price: string
-		gallery: string
-		services: string
-	}
 }
 
-const MobileNav: FC<IMobileNav> = ({ dictionary, isOpen, toggleMenu }) => {
+const MobileNav: FC<IMobileNav> = ({ isOpen, toggleMenu }) => {
 	return (
 		<div
 			className={`fixed top-0 left-0 right-0 px-5 bottom-0 bg-light-blue lg:hidden z-10 ${
@@ -35,27 +27,27 @@ const MobileNav: FC<IMobileNav> = ({ dictionary, isOpen, toggleMenu }) => {
 				<ul className="flex flex-col my-8 justify-between items-center gap-8 md:gap-10 text-center text-xl">
 					<li>
 						<a href={`/#articles`} onClick={toggleMenu}>
-							{dictionary.articles}
+							Wichtiges über Hunde
 						</a>
 					</li>
 					<li>
 						<a href={`/#about`} onClick={toggleMenu}>
-							{dictionary.about}
+							Über mich
 						</a>
 					</li>
 					<li>
 						<a href={`/#price`} onClick={toggleMenu}>
-							{dictionary.price}
+							Preise
 						</a>
 					</li>
 					<li>
 						<a href={`/#galery`} onClick={toggleMenu}>
-							{dictionary.gallery}
+							Galerie
 						</a>
 					</li>
 					<li>
 						<a href={`/`} onClick={toggleMenu}>
-							{dictionary.services}
+							Leistungen
 						</a>
 					</li>
 					<Link
@@ -72,7 +64,6 @@ const MobileNav: FC<IMobileNav> = ({ dictionary, isOpen, toggleMenu }) => {
 						/>
 					</Link>
 				</ul>
-				<LocaleSwitcher />
 			</nav>
 		</div>
 	)

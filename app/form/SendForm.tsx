@@ -2,7 +2,7 @@
 
 import { ChangeEvent, useState } from 'react'
 
-import MainButton from '../../../components/MainButton'
+import MainButton from '@/components/MainButton'
 import Checkbox from '../meeting/Checkbox'
 import DateTimeField from '../meeting/DateTimeField'
 import Question from '../meeting/Question'

@@ -19,9 +19,9 @@
 				"name": "next"
 			}
 		],
-		"baseUrl": "",
+		"baseUrl": ".",
 		"paths": {
-			"@component/*": ["*"],
+			"@/*": ["*"],
 			"@/icons/*": ["public/icons/*"]
 		}
 	},

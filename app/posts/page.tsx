@@ -1,5 +1,5 @@
-import { Post, PostsProps } from '@component/components/articles/Articles'
-import CardArticle from '@component/components/articles/CardArticle'
+import { Post, PostsProps } from '@/components/articles/Articles'
+import CardArticle from '@/components/articles/CardArticle'
 
 const getPosts = async (): Promise<PostsProps> => {
 	const data = await fetch(`${process.env.PAYLOAD_SERVER_URL}/api/posts/`)

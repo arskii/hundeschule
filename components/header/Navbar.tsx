@@ -2,19 +2,11 @@
 
 import menuButton from '@/icons/menuButton.svg'
 import Image from 'next/image'
-import LocaleSwitcher from './locale-switcher'
 
 interface INavBar {
-	dictionary: {
-		articles: string
-		about: string
-		price: string
-		gallery: string
-		services: string
-	}
 	toggleMenu: () => void
 }
-export default function Navbar({ dictionary, toggleMenu }: INavBar) {
+export default function Navbar({ toggleMenu }: INavBar) {
 	return (
 		<nav className="container mx-auto">
 			<button
@@ -27,31 +19,30 @@ export default function Navbar({ dictionary, toggleMenu }: INavBar) {
 				<ul className="flex items-center gap-10">
 					<li>
 						<a className="hover:text-white" href={`#articles`}>
-							{dictionary.articles}
+							Wichtiges über Hunde
 						</a>
 					</li>
 					<li>
 						<a className="hover:text-white" href={`#about`}>
-							{dictionary.about}
+							Über mich
 						</a>
 					</li>
 					<li>
 						<a className="hover:text-white" href={`#price`}>
-							{dictionary.price}
+							Preise
 						</a>
 					</li>
 					<li>
 						<a className="hover:text-white" href={`#galery`}>
-							{dictionary.gallery}
+							Galerie
 						</a>
 					</li>
 					<li>
 						<a className="hover:text-white" href={`/`}>
-							{dictionary.services}
+							Leistungen
 						</a>
 					</li>
 				</ul>
-				<LocaleSwitcher />
 			</div>
 		</nav>
 	)
